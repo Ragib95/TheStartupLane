@@ -1,0 +1,91 @@
+{% extends 'startup/nav.html' %}
+
+{% block content %}
+    <div class="container startup_detail">
+        <div class="col-md-2">
+        <div class="box">
+            <img src="{{ startup.logo_url }}">
+        </div>
+        </div>
+
+        <div class="col-md-8">
+            <div class="box">
+                <h1 class="heading">{{ startup.name }}</h1>
+                <h5 class="heading">Details :</h5>
+                <ul class="detail">
+                    <li><span class="col-md-3">Headquarters</span> <span class="col-md-9">: {{ startup.location }}</span></li>
+                    <li><span class="col-md-3">Industry</span> <span class="col-md-9">: {{ startup.industry }}</span></li>
+                    <li><span class="col-md-3">Foundation Date</span> <span class="col-md-9">: {{ startup.found_date }}</span></li>
+                    <li><span class="col-md-3">Website</span> <span class="col-md-9"><a href="{{ startup.link }}">: {{ startup.link }}</a></span></li>
+                </ul>
+            </div>
+            {% for contact in contacts %}
+                <div class="box contact">
+                    <h5 class="heading">Contacts :</h5>
+                    <ul class="detail">
+                        <li><span class="col-md-3">Phone</span> <span class="col-md-9">: {{ contact.contact }}</span></li>
+                        <li><span class="col-md-3">Email</span> <span class="col-md-9">: {{ contact.email }}</span></li>
+                        <li><span class="col-md-3">Address</span> <span class="col-md-9">: {{ contact.address }}</span></li>
+                        <li><span class="col-md-3">LinkedIn</span> <span class="col-md-9"><a href="{{ contact.linkedIn }}">: {{ contact.linkedIn }}</a></span></li>
+                        <li><span class="col-md-3">Facebook</span> <span class="col-md-9"><a href="{{ contact.facebook }}">: {{ contact.facebook }}</a></span></li>
+                        <li><span class="col-md-3">Twitter</span> <span class="col-md-9"><a href="{{ contact.twitter }}">: {{ contact.twitter }}</a></span></li>
+                    </ul>
+                </div>
+            {% endfor %}
+
+            <div class="box founder">
+                <h5 class="heading">Founders :</h5>
+                {% for founder in founders %}
+                    <ul class="detail">
+                        <li><span class="col-md-3">Name</span> <span class="col-md-9">: {{ founder.name }}</span></li>
+                        <li><span class="col-md-3">LinkedIn</span> <span class="col-md-9"><a href="{{ founder.linkedIn_link }}">: {{ founder.linkedIn_link }}</a></span></li>
+                    </ul>
+
+                {% endfor %}
+            </div>
+
+            {% for funding in fundings %}
+                <div class="box funding">
+                <h5 class="heading">Fundings :</h5>
+                <table>
+                    <tr>
+                        <th>Investor</th>
+                        <th>Funding Date</th>
+                        <th>Amount/ Round</th>
+                    </tr>
+                    {%for a, b, c in funding %}
+                        <tr>
+                            <td>{{ a }}</td>
+                            <td>{{ b }}</td>
+                            <td>{{ c }}</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+                </div>
+
+            {% endfor %}
+
+            {% for invest in invested %}
+                <div class="box funding">
+                    <h5 class="heading">Invested In :</h5>
+                    <table>
+                    <tr>
+                        <th>Invested In</th>
+                        <th>Date</th>
+                        <th>Amount/ Round</th>
+                    </tr>
+                    {%for a, b, c in invest %}
+                        <tr>
+                            <td>{{ a }}</td>
+                            <td>{{ b }}</td>
+                            <td>{{ c }}</td>
+                        </tr>
+                    {% endfor %}
+                    </table>
+                </div>
+
+            {% endfor %}
+
+        </div>
+    </div>
+{% endblock %}

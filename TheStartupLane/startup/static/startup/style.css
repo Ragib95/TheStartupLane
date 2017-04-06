@@ -1,0 +1,248 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    background-color: white;
+}
+a:link {
+    text-decoration: none;
+}
+a:visited {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+    color: #0093ff;
+}
+a:active {
+    text-decoration: none;
+}
+.header img{
+    display: inline;
+    height: 60px;
+}
+.header{
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    background-color: #008083;
+    margin: auto;
+    font-family: 'Comfortaa', cursive;
+
+}
+.heading{
+    padding-left: 54px;
+    font-size: 25px;
+    margin-top: 15px;
+}
+.heading a{
+    color: #008083;
+}
+.image {
+    width: 100%;
+    border-radius: 10px;
+}
+.box .col-md-2{
+    padding-left: 1px;
+    padding-right: 1px;
+}
+.right{
+    float: right;
+    padding-top: 18px;
+}
+.right input{
+    width: 300px;
+    height: 35px;
+    padding-left: 5px;
+}
+.right1{
+    padding-top: 18px;
+}
+.nav a{
+    color: #f0f0f0;
+    font-weight: 100;
+    font-size: 22px;
+    display: block;
+    padding: 10px 15px 1px;
+}
+.main{
+    padding-top: 81px;
+}
+.box {
+    position: relative;
+    display: inline-block;
+    background: #f9fdfd;
+    border: 2px solid #f0f0f0;
+    width: 100%;
+    padding: 1px;
+}
+.detail{
+    list-style-type: none;
+}
+footer{
+    margin-top: 15px;
+    background: #f4f4ef;
+}
+ul.social_links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+nav.social{
+    float: right;
+    padding: 10px 15px 5px;
+    width: 100%;
+}
+ul.social_links{
+    float: right;
+}
+nav.social ul.social_links li {
+    display: inline-block;
+}
+nav.social ul.social_links li a {
+    display: block;
+    width: 1.875em;
+    height: 1.875em;
+    margin-right: 1.5em;
+    line-height: 0;
+    opacity: .6;
+    transition: opacity .3s ease;
+}
+#copyright{
+    text-align: center;
+}
+nav.foot{
+    width: 100%;
+    padding-top: 25px;
+}
+.footer_nav{
+    list-style-type: none;
+    display: flex;
+    width: auto;
+}
+ul.footer_nav li{
+    width: auto;
+}
+ul.footer_nav li{
+    margin-bottom: 24px;
+    flex-grow: 5;
+}
+.footer_nav_toggle li{
+    list-style-type: none;
+    width: 100%;
+}
+ul.nav_list{
+    padding: 0;
+}
+nav.foot ul.footer_nav h3{
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+nav{
+    font-family: 'Comfortaa', cursive;
+}
+input.srch-btn{
+    position: absolute;
+    right: 253px;
+    top: 39px;
+    width: 18px;
+    height: 18px;
+    background: transparent url(http://i.imgci.com/espncricinfo/redesign/sprite-black.png) -465px -82px no-repeat;
+    border: 0;
+    opacity: 0.4;
+    cursor: pointer;
+}
+.search_intern{
+    background-image: url(img/london-city-road-Wallpaper.jpg);
+    width: 100%;
+    height: 500px;
+    background-position: center center;
+    background-size: cover;
+}
+.search_intern .search_content{
+    text-align: center;
+    position: absolute;
+    right: 437px;
+    top: 265px;
+}
+.search_content input{
+    width: 430px;
+    height: 40px;
+    padding-left: 5px;
+}
+input.srch-btn1{
+    right: 44px;
+    top: 80px;
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background: transparent url(http://i.imgci.com/espncricinfo/redesign/sprite-black.png) -465px -82px no-repeat;
+    border: 0;
+    opacity: 0.4;
+    cursor: pointer;
+}
+.startup_detail img{
+    width: 100%;
+    border-radius: 10px;
+}
+.search .search_content{
+    text-align: center;
+}
+.search input{
+    width: 70%;
+
+}
+.search .srch-btn1{
+    right: 290px;
+    top: 137px;
+    width: 18px;
+    height: 18px;
+}
+table{
+    width: 80%;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-left: 10%;
+}
+table{
+    border-collapse: collapse;
+}
+table tr td{
+    border: 1px solid black;
+    padding: 8px 10px;
+}
+
+.major .cities{
+    text-align: center;
+    padding: 2%;
+}
+.discover-image {
+    width: 115px;
+    height: 115px;
+    border-radius: 35px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    left: 0
+}
+.discover-image span {
+    color: white;
+    margin: auto;
+    text-align: center;
+    position: absolute;
+    font-weight: lighter;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    line-height: 115px;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    text-shadow: 0 0 8px black;
+    font-style: normal;
+}

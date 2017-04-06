@@ -1,0 +1,30 @@
+{% extends 'startup/nav.html' %}
+
+{% block content %}
+    <div class="col-md-10">
+        {% for intern in intern_list %}
+            <a href="{% url 'startup_page' startup_name=intern.startup.name %}">
+                <div class="box">
+                    <div class="col-md-3">
+                        <img src="{{ intern.startup.logo_url }}" width="100%">
+                    </div>
+
+                <div class="col-md-9">
+                    <h3 class="heading">
+                        <a href="{% url 'startup_page' startup_name=intern.startup.name %}">{{ intern.startup.name }}</a>
+                    </h3>
+                    <p>Location           : {{ intern.location }}</p>
+                    <p>Stipend            : {{ intern.salary }}</p>
+                    <p>Starting Date      : {{ intern.start_date }}</p>
+                    <p>Duration of Intern : {{ intern.duration }}</p>
+                    <p>Apply at           : <a href="{{ intern.apply }}" target="_blank"><strong>{{ intern.source }}</strong></a></p>
+
+                </div>
+                </div>
+            </a>
+
+
+        {% endfor %}
+    </div>
+
+{% endblock %}

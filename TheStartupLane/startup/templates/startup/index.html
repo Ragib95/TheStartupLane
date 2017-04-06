@@ -1,0 +1,57 @@
+{% extends 'startup/nav.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="search_intern">
+        <div class="search_content">
+            <h1>Go ahead. Search for Startup!</h1>
+            <div class="input">
+                <form action="{% url 'search' %}" method="get">
+                    <input type="text" placeholder="Search Startup..." title="Search Startup..." name="q" autocomplete="off">
+                    <input type="submit" value class="srch-btn1">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+    <div class="popular major">
+        <div class="popular-title cities ">
+            <div><h3>Startup in Metro Cities</h3></div>
+            <a href="{% url 'city' city_name='Bangalore' %}">
+                <div style="background-image: url({% static 'startup/img/bangalore.jpg' %});" class="discover-image">
+                    <span>Bangalore</span>
+                </div>
+            </a>
+            <a href="{% url 'city' city_name='New Delhi' %}">
+                <div style="background-image: url({% static 'startup/img/new_delhi.jpg' %});" class="discover-image">
+                    <span>New Delhi</span>
+                </div>
+            </a>
+            <a href="{% url 'city' city_name='Mumbai' %}">
+                <div style="background-image: url({% static 'startup/img/mumbai.jpg' %});" class="discover-image">
+                    <span>Mumbai</span>
+                </div>
+            </a>
+            <a href="{% url 'city' city_name='Hyderabad' %}">
+                <div style="background-image: url({% static 'startup/img/hyderabad.jpg' %});" class="discover-image">
+                    <span>Hyderabad</span>
+                </div>
+            </a>
+            <a href="{% url 'city' city_name='Chennai' %}">
+                <div style="background-image: url({% static 'startup/img/chennai.jpg' %});" class="discover-image">
+                    <span>Chennai</span>
+                </div>
+            </a>
+            <a href="{% url 'city' city_name='Gurgaon' %}">
+                <div style="background-image: url({% static 'startup/img/new_delhi.jpg' %});" class="discover-image">
+                    <span>Gurgaon</span>
+                </div>
+            </a>
+
+        </div>
+
+    </div>
+    </div>
+
+{% endblock %}

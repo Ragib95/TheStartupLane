@@ -1,0 +1,120 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Open+Sans" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{% static 'startup/style.css' %}" />
+</head>
+<body>
+<header class="header">
+    <nav class="nav">
+        <ul class="list-inline col-md-3">
+            <li><a href="/"><img src=" {% static 'startup/img/stl_shubhu.jpg' %}" alt=""></a></li>
+        </ul>
+        <ul class="list-inline col-md-4 right1">
+            <li><a href="{% url 'startup' %}">Startups</a></li>
+            <li><a href="{% url 'news' %}">News</a></li>
+            <li><a href="{% url 'internship' %}">Internships</a></li>
+        </ul>
+        <ul class="right list-inline col-md-5">
+            <li>
+                <form action="{% url 'search' %}" method="get" >
+                    <input type="text" placeholder="Search Startup..." title="Search Startup..." name="q"  autocomplete="off">
+                    <input type="submit" value class="srch-btn">
+                </form>
+            </li>
+            <li><a href="{% url 'blog' %}">Blog</a></li>
+            <li><a href="#">Login</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="content">
+    <div class="main">
+        {% block content %}{% endblock %}
+    </div>
+</div>
+
+<footer class="col-md-12">
+    <div class="container">
+        <nav class="foot">
+            <ul class="footer_nav">
+                <li class="footer_nav_toggle">
+                    <h3>Startup by City</h3>
+                    <ul class="nav_list">
+                        <!-- feature SDC (displayable_nd = false pre launch) -->
+                        <li><a href="{% url 'city' city_name='Bangalore' %}">Bangalore</a></li>
+                        <li><a id="ga-648c8a" href="{% url 'city' city_name='New Delhi' %}">New Delhi</a></li>
+                        <li><a id="ga-3c0dff" href="{% url 'city' city_name='Mumbai' %}">Mumbai</a></li>
+                        <li><a id="ga-b0e970" href="{% url 'city' city_name='Hyderabad' %}">Hyderabad</a></li>
+                        <li><a id="ga-af7b38" href="{% url 'city' city_name='Chennai' %}">Chennai</a></li>
+                        <li><a id="ga-876768" href="{% url 'city' city_name='Gurgaon' %}">Gurgaon</a></li>
+                  </ul>
+                </li>
+                <li class="footer_nav_toggle list-inline">
+                  <h3>Resources</h3>
+                  <ul class="nav_list">
+                    <li><a id="ga-16f0e9" href="{% url 'blog' %}">Blog</a></li>
+                    <li><a id="ga-32b618" href="#">Help &amp; FAQ</a></li>
+                    <li><a id="ga-3472cd" href="#">Android App</a></li>
+                  </ul>
+                </li>
+                <li class="footer_nav_toggle">
+                  <h3>The Startup Lane</h3>
+                  <ul class="nav_list">
+                    <li><a id="ga-612273" href="#">About Us</a></li>
+                    <li><a id="ga-23a869" href="#">In the News</a></li>
+                    <li><a id="ga-5b8dff" href="#">Jobs @ TheStartupLane</a></li>
+                    <li><a id="ga-30229a" href="#">Team</a></li>
+                    <li><a id="ga-40da0d" href="#">The Startup lane for Business</a></li>
+                  </ul>
+                </li>
+                <li class="footer_nav_toggle">
+                  <h3>Inquiries</h3>
+                  <ul class="nav_list">
+                    <li><a id="ga-bd48d6" href="#">Contact Us</a></li>
+                    <li><a id="ga-8a5172" href="#">Terms</a></li>
+                    <li><a id="ga-8b4cb0" href="#">Privacy Policy</a></li>
+                    <li><a id="ga-df63b7" href="#">Service Status</a></li>
+                    <li><a id="ga-04cc26" href="#">Site Map</a></li>
+                  </ul>
+                </li>
+
+              </ul>
+                </nav>
+        <nav class="social">
+            <ul class="social_links">
+                <li>
+                    <a id="ga-dcbbc9" href="https://twitter.com/" target="_blank">
+                        <img alt="Twitter" src="https://d125fmws0bore1.cloudfront.net/assets/svgs/social_twitter-9d5df2d90c83133e469f14478749086159188f83283876c13d6b5956e84c927c.svg">
+                    </a>
+                </li>
+                <li>
+                    <a id="ga-7f4a0f" href="https://www.facebook.com/thestartuplane/" target="_blank">
+                        <img alt="Facebook" src="https://d125fmws0bore1.cloudfront.net/assets/svgs/social_facebook-db4737e8debd34185dffa30be1a417fb126d36384386d7ac63d3b2a226b2277f.svg">
+                    </a>
+                </li>
+                <li>
+                    <a id="ga-4032f6" href="https://plus.google.com/" target="_blank">
+                        <img alt="Google +" src="https://d125fmws0bore1.cloudfront.net/assets/svgs/social_gplus-50c4b2873372dfa9615fc41111638266df1817e5d2d1dd72b0d72ac6c373b3b3.svg">
+                    </a>
+                </li>
+                <li>
+                    <a id="ga-f954c5" href="https://www.linkedin.com/company/" target="_blank">
+                        <img alt="LinkedIn" src="https://d125fmws0bore1.cloudfront.net/assets/svgs/social_linkedin-8fc4751fca48e5ef25bd402cab4e0b7db953559f32d4e616f9328167edbef062.svg">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div id="copyright">
+            <p>© Copyright 2016 TheStartupLane</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

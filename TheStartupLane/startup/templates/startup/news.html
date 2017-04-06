@@ -1,0 +1,30 @@
+{% extends 'startup/nav.html' %}
+
+{% block content %}
+    <div class="col-md-10">
+        {% for news in news_list %}
+            <a href="{{ news.link }}">
+                <div class="box">
+                    <div class="col-md-3">
+                        <img src="{{ news.img_link }}" class="image">
+                    </div>
+
+                <div class="col-md-9">
+                    <h3>
+                        <a href="{{ news.link }}" target="_blank">{{ news.heading }}</a>
+                    </h3>
+                    <h6>{{ news.pub_date }} | {{ news.source }}</h6>
+
+                    <p>{{ news.content }}</p>
+
+                </div>
+                </div>
+            </a>
+
+
+        {% endfor %}
+    </div>
+
+    <div class="col-md-2">
+    </div>
+{% endblock %}
